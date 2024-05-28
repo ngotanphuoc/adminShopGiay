@@ -6,7 +6,7 @@
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">LMHT<sup>Shop</sup></div>
+  <div class="sidebar-brand-text mx-3">PQ<sup>Shoes Store</sup></div>
 </a>
 
 <!-- Divider -->
