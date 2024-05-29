@@ -1,13 +1,11 @@
 <?php
 session_start();
         if($_SESSION['role']==1){
-            $mod = isset($_GET['mod']) ? $_GET['mod'] : "quanliadmin";
+            $mod = isset($_GET['mod']) ? $_GET['mod'] : "home";
             $act = isset($_GET['act']) ? $_GET['act'] : "list";
         }else if($_SESSION['role']==2){
-            $mod = isset($_GET['mod']) ? $_GET['mod'] : "quanlihang";
+            $mod = isset($_GET['mod']) ? $_GET['mod'] : "home";
             $act = isset($_GET['act']) ? $_GET['act'] : "list";
-        }else{
-            header('location: ../?act=home');
         }
             switch($mod){
                 case 'quanliadmin':
@@ -28,6 +26,30 @@ session_start();
                             break;
                         case 'edit':
                             $obj1->edit();
+                            break;
+                        default:
+                            $obj1->list();
+                            break;
+                    }
+                    break;
+                case 'home':
+                    require_once('controllers/homeController.php');
+                    $obj1 = new homeController();
+                    switch($act){
+                        case 'list':
+                            $obj1->list();
+                            break;
+                        default:
+                            $obj1->list();
+                            break;
+                    }
+                    break;
+                case 'thongtinkhachhang':
+                    require_once('controllers/thongTinKhachHangController.php');
+                    $obj1 = new thongTinKhachHang();
+                    switch($act){
+                        case 'list':
+                            $obj1->list();
                             break;
                         default:
                             $obj1->list();

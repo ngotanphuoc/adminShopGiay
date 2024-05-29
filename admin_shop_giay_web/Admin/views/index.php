@@ -61,10 +61,10 @@
               <div class="table-responsive">
               <?php
                 if($_SESSION['role']==1){
-                    $mod = isset($_GET['mod']) ? $_GET['mod'] : "quanliadmin";
+                    $mod = isset($_GET['mod']) ? $_GET['mod'] : "home";
                     $act = isset($_GET['act']) ? $_GET['act'] : "list";
                 }else if($_SESSION['role']==2){
-                    $mod = isset($_GET['mod']) ? $_GET['mod'] : "quanlihang";
+                    $mod = isset($_GET['mod']) ? $_GET['mod'] : "home";
                     $act = isset($_GET['act']) ? $_GET['act'] : "list";
                 }
                   switch ($mod) {
@@ -81,6 +81,26 @@
                                 break;
                             default:
                                 require_once('admin/list.php');
+                                break;
+                        }
+                        break;
+                    case 'home':
+                      switch ($act) {
+                        case 'list':
+                                require_once('home/list.php');
+                                break;
+                            default:
+                                require_once('home/list.php');
+                                break;
+                        }
+                        break;
+                    case 'thongtinkhachhang':
+                      switch ($act) {
+                        case 'list':
+                                require_once('khachhang/list.php');
+                                break;
+                            default:
+                                require_once('khachhang/list.php');
                                 break;
                         }
                         break;

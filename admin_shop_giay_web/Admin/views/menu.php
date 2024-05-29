@@ -6,7 +6,7 @@
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">PQ<sup>Shoes Store</sup></div>
+  <div class="sidebar-brand-text mx-3">PQ<sup>Shoes Shop</sup></div>
 </a>
 
 <!-- Divider -->
@@ -19,6 +19,13 @@
 <div class="sidebar-heading">
   Chức năng
 </div>
+
+<!-- Nav Item - Tables -->
+<li class="nav-item">
+  <a class="nav-link" href="?mod=home">
+    <i class="fas fa-fw fa-table"></i>
+    <span>Trang chủ</span></a>
+</li>
 
 <!-- Nav Item - Pages Collapse Menu -->
 <?php if($_SESSION['role'] == 1){?>

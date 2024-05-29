@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="loginView.css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     
-        <title>Form login unitop.vn</title>
+        <title>Admin</title>
     </head>
     <body>
     <form method="post" action="login.php" class="box">
